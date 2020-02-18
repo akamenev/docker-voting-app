@@ -2,7 +2,7 @@ name: Build and Push docker images
 on: [push]
 jobs:
   build:
-    name: Docker Login
+    name: Docker build and push
     runs-on: ubuntu-latest
     steps:
 
@@ -20,6 +20,6 @@ jobs:
           login-server: ${{ secrets.ACR_URL }}
 
       - name: Docker Build result app
-        run: docker build -f result/Dockerfile -t azurevote.azurecr/result:testtag
+        run: docker build -f result/Dockerfile -t azurevote.azurecr/result:testtag result
 
         
