@@ -1,0 +1,23 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+      - uses: actions/checkout@v2
+    
+      - name: Docker Login
+        uses: Azure/docker-login@v1
+        with:
+          # Container registry username
+          username: ${{ secrets.SP_APP_ID }}
+          # Container registry password
+          password: ${{ secrets.SP_PASSWRD }}
+          # Container registry server url
+          login-server: ${{ secrets.ACR_URL }}
+
