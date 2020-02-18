@@ -1,13 +1,11 @@
-name: CI
-
+name: Build and Push docker images
 on: [push]
-
 jobs:
   build:
-
+    name: Docker Login
     runs-on: ubuntu-latest
-
     steps:
+
       - name: Checkout
       - uses: actions/checkout@v2
     
@@ -20,4 +18,3 @@ jobs:
           password: ${{ secrets.SP_PASSWRD }}
           # Container registry server url
           login-server: ${{ secrets.ACR_URL }}
-
