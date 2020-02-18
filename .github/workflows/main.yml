@@ -28,4 +28,13 @@ jobs:
       - name: Docker Build worker app
         run: docker build -f worker/Dockerfile -t azurevote.azurecr/worker:$GITHUB_SHA worker
 
+      - name: Docker Push result app
+        run: docker push azurevote.azurecr/result:$GITHUB_SHA
+
+      - name: Docker Push vote app
+        run: docker push azurevote.azurecr/vote:$GITHUB_SHA
+
+      - name: Docker Push worker app
+        run: docker push azurevote.azurecr/worker:$GITHUB_SHA
+
         
