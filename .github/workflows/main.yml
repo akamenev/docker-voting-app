@@ -36,5 +36,3 @@ jobs:
 
       - name: Docker Push worker app
         run: docker push azurevote.azurecr.io/worker:$GITHUB_SHA
-
-        

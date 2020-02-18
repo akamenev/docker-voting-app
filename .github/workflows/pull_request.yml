@@ -1,0 +1,21 @@
+name: Test on pull request
+on: [pull_request]
+jobs:
+  build:
+    name: Test and auto-merge
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Tests placeholder for result app
+        run: echo "Tests for the result app ran successfully"
+      
+      - name: Tests placeholder for result app
+        run: echo "Tests for the result app ran successfully"
+      
+      - name: Tests placeholder for result app
+        run: echo "Tests for the result app ran successfully"
+
+      
