@@ -20,6 +20,6 @@ jobs:
           login-server: ${{ secrets.ACR_URL }}
 
       - name: Docker Build result app
-        run: docker build -f result/Dockerfile -t ${{ secrets.ACR_URL }}/result:testtag
+        run: docker build -f result/Dockerfile -t azurevote.azurecr/result:testtag
 
         
