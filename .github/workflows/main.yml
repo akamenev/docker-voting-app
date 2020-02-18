@@ -15,6 +15,6 @@ jobs:
           # Container registry username
           username: ${{ secrets.SP_APP_ID }}
           # Container registry password
-          password: ${{ secrets.SP_PASSWRD }}
+          password: ${{ secrets.SP_PASSWD }}
           # Container registry server url
           login-server: ${{ secrets.ACR_URL }}
