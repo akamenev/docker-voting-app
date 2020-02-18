@@ -7,7 +7,7 @@ This is the Docker demo voting app that has 3 services:
 
 ![Architecture diagram](architecture.png)
 
-The voting application only accepts one vote per client. It does not register votes if a vote has already been submitted from a client.
+The voting application only accepts one vote per client. It does not register votes if a vote has already been submitted from a client
 
 ## Result service configuration
 | Name                    | Required | Type        | Default Value  | Description                                       |
