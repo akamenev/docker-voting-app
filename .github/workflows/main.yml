@@ -20,21 +20,21 @@ jobs:
           login-server: ${{ secrets.ACR_URL }}
 
       - name: Docker Build result app
-        run: docker build -f result/Dockerfile -t azurevote.azurecr/result:$GITHUB_SHA result
+        run: docker build -f result/Dockerfile -t azurevote.azurecr.io/result:$GITHUB_SHA result
 
       - name: Docker Build vote app
-        run: docker build -f vote/Dockerfile -t azurevote.azurecr/vote:$GITHUB_SHA vote
+        run: docker build -f vote/Dockerfile -t azurevote.azurecr.io/vote:$GITHUB_SHA vote
 
       - name: Docker Build worker app
-        run: docker build -f worker/Dockerfile -t azurevote.azurecr/worker:$GITHUB_SHA worker
+        run: docker build -f worker/Dockerfile -t azurevote.azurecr.io/worker:$GITHUB_SHA worker
 
       - name: Docker Push result app
-        run: docker push azurevote.azurecr/result:$GITHUB_SHA
+        run: docker push azurevote.azurecr.io/result:$GITHUB_SHA
 
       - name: Docker Push vote app
-        run: docker push azurevote.azurecr/vote:$GITHUB_SHA
+        run: docker push azurevote.azurecr.io/vote:$GITHUB_SHA
 
       - name: Docker Push worker app
-        run: docker push azurevote.azurecr/worker:$GITHUB_SHA
+        run: docker push azurevote.azurecr.io/worker:$GITHUB_SHA
 
         
