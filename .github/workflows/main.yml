@@ -2,7 +2,7 @@ name: Build and Push docker images
 on: [push]
 jobs:
   build:
-    name: Docker build and push
+    name: Docker login, build, and push
     runs-on: ubuntu-latest
     steps:
 
@@ -21,5 +21,11 @@ jobs:
 
       - name: Docker Build result app
         run: docker build -f result/Dockerfile -t azurevote.azurecr/result:$GITHUB_SHA result
+
+      - name: Docker Build vote app
+        run: docker build -f vote/Dockerfile -t azurevote.azurecr/vote:$GITHUB_SHA vote
+
+      - name: Docker Build worker app
+        run: docker build -f worker/Dockerfile -t azurevote.azurecr/worker:$GITHUB_SHA worker
 
         
