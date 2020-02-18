@@ -18,3 +18,8 @@ jobs:
           password: ${{ secrets.SP_PASSWD }}
           # Container registry server url
           login-server: ${{ secrets.ACR_URL }}
+
+      - name: Docker Build
+        run: pwd
+
+        
