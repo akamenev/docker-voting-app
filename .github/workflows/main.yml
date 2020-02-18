@@ -19,7 +19,7 @@ jobs:
           # Container registry server url
           login-server: ${{ secrets.ACR_URL }}
 
-      - name: Docker Build
-        run: pwd
+      - name: Docker Build result app
+        run: docker build -f result/Dockerfile -t ${{ secrets.ACR_URL }}/result:testtag
 
         
